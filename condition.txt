@@ -1,0 +1,104 @@
+# 1.以'#'起始表示注释行
+# 2.以<数据表名>起始，</数据表名>结束
+# 3.字段名称对应SQL表中字段名称
+# 4.条件包括'>', '>=' , '==', '<=', '<', '!='，符合条件则报告异常
+# 5.类型包括'int', 'float', 'string'，整型不区分int或long，浮点不区分float或double
+# 6.文件必须以空白行结尾
+
+<SECURITY_ANALYSIS_DAY>
+#   字段名称    条件  数值          类型          注释
+    INNER_CODE  <   11000000      int     证券内部编码从11-前缀起始
+    INNER_CODE  >   23000000      int     证券内部编码至22-前缀终止
+    LCLOSE      <   0             float   证券收盘价大于0
+    LCLOSE      >   10000         float   证券收盘价小于10000
+    TOPEN       <   0             float   证券开盘价大于0
+    TOPEN       >   10000         float   证券开盘价小于10000
+    THIGH       <   0             float   证券最高价大于0
+    THIGH       >   10000         float   证券最高价小于10000
+    TLOW        <   0             float   证券最低价大于0
+    TLOW        >   10000         float   证券最低价小于10000
+    TVOLUME     <   0             float   证券成交量大于0
+    TVOLUME     >   1000000000000 float   证券成交量小于1万亿
+    TVALUE      <   0             float   证券成交金额大于0
+    TVALUE      >   1000000000000 float   证券成交金额小于1万亿
+    CHNG        <   -3000         float   证券涨跌额大于-3000
+    CHNG        >   3000          float   证券涨跌额小于3000
+    CHNG_PCT    <   -1            float   证券涨跌幅大于-1
+    CHNG_PCT    >   300           float   证券涨跌幅小于300
+</SECURITY_ANALYSIS_DAY>
+
+<SECURITY_ANALYSIS_WEEK>
+#   字段名称    条件  数值          类型          注释
+    INNER_CODE  <   11000000      int     证券内部编码从11-前缀起始
+    INNER_CODE  >   23000000      int     证券内部编码至22-前缀终止
+    TRADE_YEAR  <   1990          int     交易年份从1990年起始
+    TRADE_YEAR  >   2020          int     交易年份至2020年截至
+    TRADE_WEEK  <   1             int     交易周数自第1周起始
+    TRADE_WEEK  >   53            int     交易周数至第53周截至
+    LCLOSE      <   0             float   证券收盘价大于0
+    LCLOSE      >   10000         float   证券收盘价小于10000
+    TOPEN       <   0             float   证券开盘价大于0
+    TOPEN       >   10000         float   证券开盘价小于10000
+    THIGH       <   0             float   证券最高价大于0
+    THIGH       >   10000         float   证券最高价小于10000
+    TLOW        <   0             float   证券最低价大于0
+    TLOW        >   10000         float   证券最低价小于10000
+    TVOLUME     <   0             float   证券成交量大于0
+    TVOLUME     >   1000000000000 float   证券成交量小于1万亿
+    TVALUE      <   0             float   证券成交金额大于0
+    TVALUE      >   1000000000000 float   证券成交金额小于1万亿
+    CHNG        <   -3000         float   证券涨跌额大于-3000
+    CHNG        >   6000          float   证券涨跌额小于6000
+    CHNG_PCT    <   -25           float   证券涨跌幅大于-25
+    CHNG_PCT    >   100           float   证券涨跌幅小于100
+    TCLOSE_HIGH <   0             float   证券收盘最低价大于0
+    TCLOSE_LOW  >   10000         float   证券收盘最高价小于10000
+    AVG_PRC     <   0             float   平均价格大于0
+    AVG_PRC     >   10000         float   平均价格小于10000
+    EXCHR       <   0             float   换手率大于0
+    EXCHR       >   60000         float   换手率小于60000
+    AVG_EXCHR   <   0             float   平均换手率大于0
+    AVG_EXCHR   >   20000         float   平均换手率小于2000
+    SWG         <   0             float   振幅大于0
+    SWG         >   4000          float   振幅小于4000
+    TRADE_DAYS  <   1             int     每周交易天数大于等于1
+    TRADE_DAYS  >   5             int     每周交易天数小于等于5
+</SECURITY_ANALYSIS_WEEK>
+
+<SECURITY_ANALYSIS_MONTH>
+#   字段名称    条件  数值          类型          注释
+    INNER_CODE  <   11000000      int     证券内部编码从11-前缀起始
+    INNER_CODE  >   23000000      int     证券内部编码至22-前缀终止
+    TRADE_YEAR  <   1990          int     交易年份从1990年起始
+    TRADE_YEAR  >   2020          int     交易年份至2020年截至
+    TRADE_MONTH <   1             int     交易月份自1月起始
+    TRADE_MONTH >   12            int     交易月份至12月截至
+    LCLOSE      <   0             float   证券收盘价大于0
+    LCLOSE      >   10000         float   证券收盘价小于10000
+    TOPEN       <   0             float   证券开盘价大于0
+    TOPEN       >   10000         float   证券开盘价小于10000
+    THIGH       <   0             float   证券最高价大于0
+    THIGH       >   10000         float   证券最高价小于10000
+    TLOW        <   0             float   证券最低价大于0
+    TLOW        >   10000         float   证券最低价小于10000
+    TVOLUME     <   0             float   证券成交量大于0
+    TVOLUME     >   1000000000000 float   证券成交量小于1万亿
+    TVALUE      <   0             float   证券成交金额大于0
+    TVALUE      >   1000000000000 float   证券成交金额小于1万亿
+    CHNG        <   -5000         float   证券涨跌额大于-5000
+    CHNG        >   6000          float   证券涨跌额小于6000
+    CHNG_PCT    <   -35           float   证券涨跌幅大于-35
+    CHNG_PCT    >   100           float   证券涨跌幅小于100
+    TCLOSE_HIGH <   0             float   证券收盘最低价大于0
+    TCLOSE_LOW  >   10000         float   证券收盘最高价小于10000
+    AVG_PRC     <   0             float   平均价格大于0
+    AVG_PRC     >   10000         float   平均价格小于10000
+    EXCHR       <   0             float   换手率大于0
+    EXCHR       >   60000         float   换手率小于60000
+    AVG_EXCHR   <   0             float   平均换手率大于0
+    AVG_EXCHR   >   20000         float   平均换手率小于2000
+    SWG         <   0             float   振幅大于0
+    SWG         >   4000          float   振幅小于4000
+    TRADE_DAYS  <   1             int     每周交易天数大于等于1
+    TRADE_DAYS  >   23            int     每周交易天数小于等于22
+</SECURITY_ANALYSIS_MONTH>
